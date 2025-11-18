@@ -5,49 +5,251 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Melody Ink — Maintenance</title>
   <style>
+    :root {
+      --bg: #050509;
+      --card-bg: #12121a;
+      --accent: #ff9ecf;
+      --text-main: #f7f7f7;
+      --text-muted: #c4c4c4;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
-      background: #111;
-      color: #fff;
-      font-family: Arial, sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-      padding: 20px;
+      background: radial-gradient(circle at top, #201321 0, #050509 55%);
+      color: var(--text-main);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      min-height: 100vh;
     }
-    a {
-      color: #ff9ecf;
-      text-decoration: none;
-      font-weight: bold;
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 16px 48px;
     }
-    a:hover {
-      text-decoration: underline;
-    }
+
     .container {
-      max-width: 400px;
+      background: rgba(5, 5, 9, 0.92);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.65);
+      padding: 24px 18px 32px;
     }
+
+    @media (min-width: 768px) {
+      .container {
+        padding: 32px 32px 40px;
+      }
+    }
+
     h1 {
-      margin-bottom: 0.5rem;
+      margin: 0 0 0.25rem;
       font-size: 2rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: center;
     }
+
+    .subtitle {
+      margin: 0 0 1.5rem;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
     p {
       line-height: 1.5;
+      margin: 0.4rem 0;
+      text-align: center;
+    }
+
+    .email-link {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .email-link:hover {
+      text-decoration: underline;
+    }
+
+    .btn-instagram {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: var(--accent);
+      color: #111;
+      border-radius: 999px;
+      font-weight: 600;
+      text-decoration: none;
+      margin: 20px 0 8px;
+      box-shadow: 0 10px 25px rgba(255, 158, 207, 0.35);
+      border: none;
+    }
+
+    .btn-instagram:hover {
+      filter: brightness(1.04);
+      text-decoration: none;
+      transform: translateY(-1px);
+      box-shadow: 0 14px 30px rgba(255, 158, 207, 0.45);
+    }
+
+    .btn-instagram span.icon {
+      font-size: 1.1rem;
+    }
+
+    .helper-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .instagram-section {
+      margin-top: 28px;
+    }
+
+    .instagram-section h2 {
+      font-size: 1.1rem;
+      margin: 0 0 0.35rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      text-align: center;
+    }
+
+    .instagram-section .section-subtitle {
+      margin: 0 0 1.25rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-align: center;
+    }
+
+    /* Single-column layout, centered cards */
+    .instagram-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      align-items: center; /* centers the posts */
+    }
+
+    .insta-card {
+      background: var(--card-bg);
+      border-radius: 16px;
+      padding: 0; /* No internal padding so the embed fits flush */
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      width: 100%;
+      max-width: 500px; /* Ideal width for IG embeds */
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .insta-card blockquote {
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      background: var(--card-bg) !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    .footer-note {
+      margin-top: 1.5rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Melody Ink</h1>
-    <p>The website is currently being rebuilt ✨</p>
-    <p>For bookings, questions, or inquiries, please email:</p>
-    <p>
-      <a href="mailto:alysia@melody.ink">alysia@melody.ink</a>
-    </p>
-    <p>Thanks for your patience!</p>
-  </div>
+  <main class="page">
+    <div class="container">
+      <header>
+        <h1>Melody Ink</h1>
+        <p class="subtitle">Site update in progress — thanks for your patience 🖤</p>
+      </header>
+
+      <section aria-label="Contact">
+        <p>
+          The website is currently being rebuilt to make it easier to browse work
+          and book sessions.
+        </p>
+        <p>For bookings, questions, or inquiries, please email:</p>
+        <p>
+          <a class="email-link" href="mailto:alysia@melody.ink">
+            alysia@melody.ink
+          </a>
+        </p>
+      </section>
+
+      <!-- Instagram follow button -->
+      <p>
+        <a
+          class="btn-instagram"
+          href="https://www.instagram.com/melody.ink/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <span class="icon">📷</span>
+          <span>Follow @melody.ink on Instagram</span>
+        </a>
+      </p>
+      <p class="helper-text">
+        For the latest healed pieces, flash, and updates, Instagram will be the most up to date.
+      </p>
+
+      <!-- Instagram latest posts -->
+      <section class="instagram-section" aria-label="Latest Instagram posts">
+        <h2>Latest on Instagram</h2>
+        <p class="section-subtitle">
+          A few recent posts from the studio:
+        </p>
+
+        <div class="instagram-grid">
+          <!-- Card 1 -->
+          <div class="insta-card">
+            <blockquote
+              class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/p/CjBZ2Q-sQsc/?img_index=1"
+              data-instgrm-version="14"
+            ></blockquote>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="insta-card">
+            <blockquote
+              class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/p/DQec3o3CHIx/?img_index=1"
+              data-instgrm-version="14"
+            ></blockquote>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="insta-card">
+            <blockquote
+              class="instagram-media"
+              data-instgrm-permalink="https://www.instagram.com/p/DQq4w4RDDZe/"
+              data-instgrm-version="14"
+            ></blockquote>
+          </div>
+        </div>
+      </section>
+
+      <p class="footer-note">
+        This temporary page will disappear once the new site is live.
+      </p>
+    </div>
+  </main>
+
+  <!-- Instagram embed script -->
+  <script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
-
